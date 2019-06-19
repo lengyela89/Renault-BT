@@ -1,0 +1,251 @@
+EESchema Schematic File Version 4
+LIBS:RenaultBT-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CSRA64215:CSRA64215 U4
+U 1 1 5CCFC673
+P 6050 2350
+F 0 "U4" H 6050 3615 50  0000 C CNN
+F 1 "CSRA64215" H 6050 3524 50  0000 C CNN
+F 2 "CSRA64215:CSRA64215" H 6000 2950 50  0001 C CNN
+F 3 "" H 6000 2950 50  0001 C CNN
+	1    6050 2350
+	1    0    0    -1  
+$EndComp
+Text HLabel 2950 2950 0    50   Input ~ 0
+VBAT
+Text HLabel 2950 3050 0    50   Input ~ 0
+GND
+Text HLabel 2950 2750 0    50   Output ~ 0
+I2S_SD_OUT
+Text HLabel 2950 2650 0    50   BiDi ~ 0
+I2S_WS
+Text HLabel 2950 2550 0    50   BiDi ~ 0
+I2S_CLK
+$Comp
+L Device:R R7
+U 1 1 5CCFD4D0
+P 4400 2350
+F 0 "R7" V 4193 2350 50  0000 C CNN
+F 1 "10k" V 4284 2350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 2350 50  0001 C CNN
+F 3 "~" H 4400 2350 50  0001 C CNN
+	1    4400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Jumper JP4
+U 1 1 5CCFDE1F
+P 4900 2650
+F 0 "JP4" H 4900 2914 50  0000 C CNN
+F 1 "Jumper" H 4900 2823 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2650 50  0001 C CNN
+F 3 "~" H 4900 2650 50  0001 C CNN
+	1    4900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP3
+U 1 1 5CCFDE88
+P 4900 2550
+F 0 "JP3" H 4900 2814 50  0000 C CNN
+F 1 "Jumper" H 4900 2723 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2550 50  0001 C CNN
+F 3 "~" H 4900 2550 50  0001 C CNN
+	1    4900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP2
+U 1 1 5CCFDEC2
+P 4900 2450
+F 0 "JP2" H 4900 2714 50  0000 C CNN
+F 1 "Jumper" H 4900 2623 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2450 50  0001 C CNN
+F 3 "~" H 4900 2450 50  0001 C CNN
+	1    4900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP1
+U 1 1 5CCFDEFF
+P 4900 2350
+F 0 "JP1" H 4900 2614 50  0000 C CNN
+F 1 "Jumper" H 4900 2523 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2350 50  0001 C CNN
+F 3 "~" H 4900 2350 50  0001 C CNN
+	1    4900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP5
+U 1 1 5CCFDF63
+P 4900 2750
+F 0 "JP5" H 4900 3014 50  0000 C CNN
+F 1 "Jumper" H 4900 2923 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2750 50  0001 C CNN
+F 3 "~" H 4900 2750 50  0001 C CNN
+	1    4900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2350 4550 2350
+Wire Wire Line
+	2950 3050 4150 3050
+Wire Wire Line
+	4250 2350 4150 2350
+Wire Wire Line
+	4150 2350 4150 3050
+Wire Wire Line
+	5200 2450 5300 2450
+Wire Wire Line
+	5200 2350 5300 2350
+Wire Wire Line
+	5200 2550 5300 2550
+Wire Wire Line
+	4600 2550 2950 2550
+Wire Wire Line
+	5200 2650 5300 2650
+Wire Wire Line
+	4600 2650 2950 2650
+NoConn ~ 5300 1350
+NoConn ~ 5300 1450
+NoConn ~ 5300 1550
+NoConn ~ 5300 1650
+NoConn ~ 5300 2850
+NoConn ~ 5300 3150
+NoConn ~ 5300 3250
+NoConn ~ 5300 3350
+NoConn ~ 5300 3450
+NoConn ~ 6800 3450
+NoConn ~ 6800 3350
+NoConn ~ 6800 3250
+NoConn ~ 6800 3150
+NoConn ~ 6800 3050
+NoConn ~ 6800 2850
+NoConn ~ 6800 2750
+NoConn ~ 6800 2650
+NoConn ~ 6800 2550
+NoConn ~ 6800 2450
+NoConn ~ 6800 2350
+NoConn ~ 6800 2250
+NoConn ~ 6800 2150
+NoConn ~ 6800 2050
+NoConn ~ 6800 1950
+NoConn ~ 6800 1750
+NoConn ~ 6800 1850
+NoConn ~ 6800 1650
+NoConn ~ 6800 1550
+NoConn ~ 6800 1450
+NoConn ~ 6800 1350
+Wire Wire Line
+	5200 2750 5300 2750
+NoConn ~ 6800 2950
+$Comp
+L Device:Jumper JP6
+U 1 1 5CD874C3
+P 4900 2950
+F 0 "JP6" H 4900 3214 50  0000 C CNN
+F 1 "Jumper" H 4900 3123 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 2950 50  0001 C CNN
+F 3 "~" H 4900 2950 50  0001 C CNN
+	1    4900 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP7
+U 1 1 5CD87525
+P 4900 3050
+F 0 "JP7" H 4900 3314 50  0000 C CNN
+F 1 "Jumper" H 4900 3223 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 3050 50  0001 C CNN
+F 3 "~" H 4900 3050 50  0001 C CNN
+	1    4900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2950 4600 2950
+Wire Wire Line
+	4150 3050 4600 3050
+Wire Wire Line
+	5200 3050 5300 3050
+Wire Wire Line
+	5200 2950 5300 2950
+$Sheet
+S 3000 1550 1000 750 
+U 5CD886A8
+F0 "BTModule_ButtonIF_3v3Divider" 50
+F1 "BTModule_ButtonIF_3v3Divider.sch" 50
+F2 "GND" I R 4000 1600 50 
+F3 "IN_PIO6" I L 3000 1750 50 
+F4 "IN_PIO7" I L 3000 1850 50 
+F5 "IN_PIO8" I L 3000 1950 50 
+F6 "IN_PIO9" I L 3000 2050 50 
+F7 "IN_PIO18" I L 3000 2150 50 
+F8 "IN_PIO21" I L 3000 2250 50 
+F9 "OUT_PIO6" O R 4000 1750 50 
+F10 "OUT_PIO7" O R 4000 1850 50 
+F11 "OUT_PIO8" O R 4000 1950 50 
+F12 "OUT_PIO9" O R 4000 2050 50 
+F13 "OUT_PIO18" O R 4000 2150 50 
+F14 "OUT_PIO21" O R 4000 2250 50 
+$EndSheet
+Wire Wire Line
+	4000 1750 5300 1750
+Wire Wire Line
+	4000 1850 5300 1850
+Wire Wire Line
+	4000 1950 5300 1950
+Wire Wire Line
+	4000 2050 5300 2050
+Wire Wire Line
+	4000 2150 5300 2150
+Wire Wire Line
+	4000 2250 5300 2250
+Connection ~ 4150 3050
+Wire Wire Line
+	4000 1600 4150 1600
+Wire Wire Line
+	4150 1600 4150 2350
+Connection ~ 4150 2350
+Text HLabel 2950 2250 0    50   Input ~ 0
+PIO21
+Text HLabel 2950 2150 0    50   Input ~ 0
+PIO18
+Text HLabel 2950 2050 0    50   Input ~ 0
+PIO9
+Text HLabel 2950 1950 0    50   Input ~ 0
+PIO8
+Text HLabel 2950 1850 0    50   Input ~ 0
+PIO7
+Text HLabel 2950 1750 0    50   Input ~ 0
+PIO6
+Wire Wire Line
+	2950 1750 3000 1750
+Wire Wire Line
+	2950 1850 3000 1850
+Wire Wire Line
+	2950 1950 3000 1950
+Wire Wire Line
+	2950 2050 3000 2050
+Wire Wire Line
+	2950 2150 3000 2150
+Wire Wire Line
+	2950 2250 3000 2250
+Wire Wire Line
+	2950 2750 4600 2750
+NoConn ~ 4600 2450
+$EndSCHEMATC

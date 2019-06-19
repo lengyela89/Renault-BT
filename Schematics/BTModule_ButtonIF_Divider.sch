@@ -1,0 +1,258 @@
+EESchema Schematic File Version 4
+LIBS:RenaultBT-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2950 2350 0    50   Input ~ 0
+IN_PIO6
+Text HLabel 2950 2550 0    50   Input ~ 0
+IN_PIO7
+Text HLabel 2950 2750 0    50   Input ~ 0
+IN_PIO8
+Text HLabel 2950 2950 0    50   Input ~ 0
+IN_PIO9
+Text HLabel 2950 3150 0    50   Input ~ 0
+IN_PIO18
+Text HLabel 2950 3350 0    50   Input ~ 0
+IN_PIO21
+Text HLabel 2950 3750 0    50   Input ~ 0
+GND
+Text HLabel 5000 2350 2    50   Output ~ 0
+OUT_PIO6
+Text HLabel 5000 2550 2    50   Output ~ 0
+OUT_PIO7
+Text HLabel 5000 2750 2    50   Output ~ 0
+OUT_PIO8
+Text HLabel 5000 2950 2    50   Output ~ 0
+OUT_PIO9
+Text HLabel 5000 3150 2    50   Output ~ 0
+OUT_PIO18
+Text HLabel 5000 3350 2    50   Output ~ 0
+OUT_PIO21
+$Comp
+L Device:R R8
+U 1 1 5CD88709
+P 3250 2350
+F 0 "R8" V 3043 2350 50  0000 C CNN
+F 1 "10k" V 3134 2350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 2350 50  0001 C CNN
+F 3 "~" H 3250 2350 50  0001 C CNN
+	1    3250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5CD88748
+P 3600 2550
+F 0 "R14" H 3670 2596 50  0000 L CNN
+F 1 "12k" H 3670 2505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 2550 50  0001 C CNN
+F 3 "~" H 3600 2550 50  0001 C CNN
+	1    3600 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5CD88786
+P 3850 2750
+F 0 "R15" H 3920 2796 50  0000 L CNN
+F 1 "12k" H 3920 2705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3780 2750 50  0001 C CNN
+F 3 "~" H 3850 2750 50  0001 C CNN
+	1    3850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5CD887D3
+P 4100 2950
+F 0 "R16" H 4170 2996 50  0000 L CNN
+F 1 "12k" H 4170 2905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4030 2950 50  0001 C CNN
+F 3 "~" H 4100 2950 50  0001 C CNN
+	1    4100 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5CD8881D
+P 4350 3150
+F 0 "R17" H 4420 3196 50  0000 L CNN
+F 1 "12k" H 4420 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 3150 50  0001 C CNN
+F 3 "~" H 4350 3150 50  0001 C CNN
+	1    4350 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 5CD88854
+P 4600 3350
+F 0 "R18" H 4670 3396 50  0000 L CNN
+F 1 "12k" H 4670 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 3350 50  0001 C CNN
+F 3 "~" H 4600 3350 50  0001 C CNN
+	1    4600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5CD8888E
+P 4850 3550
+F 0 "R19" H 4920 3596 50  0000 L CNN
+F 1 "12k" H 4920 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4780 3550 50  0001 C CNN
+F 3 "~" H 4850 3550 50  0001 C CNN
+	1    4850 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5CD888CB
+P 3250 2550
+F 0 "R9" V 3043 2550 50  0000 C CNN
+F 1 "10k" V 3134 2550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 2550 50  0001 C CNN
+F 3 "~" H 3250 2550 50  0001 C CNN
+	1    3250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5CD88934
+P 3250 2750
+F 0 "R10" V 3043 2750 50  0000 C CNN
+F 1 "10k" V 3134 2750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 2750 50  0001 C CNN
+F 3 "~" H 3250 2750 50  0001 C CNN
+	1    3250 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5CD88985
+P 3250 2950
+F 0 "R11" V 3043 2950 50  0000 C CNN
+F 1 "10k" V 3134 2950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 2950 50  0001 C CNN
+F 3 "~" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5CD889DA
+P 3250 3150
+F 0 "R12" V 3043 3150 50  0000 C CNN
+F 1 "10k" V 3134 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 3150 50  0001 C CNN
+F 3 "~" H 3250 3150 50  0001 C CNN
+	1    3250 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5CD88A33
+P 3250 3350
+F 0 "R13" V 3043 3350 50  0000 C CNN
+F 1 "10k" V 3134 3350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 3350 50  0001 C CNN
+F 3 "~" H 3250 3350 50  0001 C CNN
+	1    3250 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 2350 3100 2350
+Wire Wire Line
+	3400 2350 3600 2350
+Wire Wire Line
+	3600 2350 3600 2400
+Wire Wire Line
+	2950 2550 3100 2550
+Wire Wire Line
+	2950 3350 3100 3350
+Wire Wire Line
+	2950 3150 3100 3150
+Wire Wire Line
+	2950 2950 3100 2950
+Wire Wire Line
+	2950 2750 3100 2750
+Wire Wire Line
+	4600 3500 4600 3750
+Connection ~ 4600 3750
+Wire Wire Line
+	4350 3750 4600 3750
+Wire Wire Line
+	4350 3300 4350 3750
+Connection ~ 4350 3750
+Wire Wire Line
+	4100 3100 4100 3750
+Connection ~ 4100 3750
+Wire Wire Line
+	4100 3750 4350 3750
+Wire Wire Line
+	3850 2900 3850 3750
+Wire Wire Line
+	2950 3750 3600 3750
+Connection ~ 3850 3750
+Wire Wire Line
+	3850 3750 4100 3750
+Wire Wire Line
+	3600 2700 3600 3750
+Connection ~ 3600 3750
+Wire Wire Line
+	3600 3750 3850 3750
+Wire Wire Line
+	4600 3750 4850 3750
+Wire Wire Line
+	4850 3750 4850 3700
+Wire Wire Line
+	3400 3350 4850 3350
+Wire Wire Line
+	4850 3400 4850 3350
+Connection ~ 4850 3350
+Wire Wire Line
+	4850 3350 5000 3350
+Wire Wire Line
+	3400 3150 4600 3150
+Wire Wire Line
+	4600 3200 4600 3150
+Connection ~ 4600 3150
+Wire Wire Line
+	4600 3150 5000 3150
+Wire Wire Line
+	3400 2950 4350 2950
+Wire Wire Line
+	4350 2950 4350 3000
+Wire Wire Line
+	4350 2950 5000 2950
+Connection ~ 4350 2950
+Wire Wire Line
+	3400 2750 4100 2750
+Wire Wire Line
+	4100 2750 4100 2800
+Connection ~ 4100 2750
+Wire Wire Line
+	4100 2750 5000 2750
+Wire Wire Line
+	3400 2550 3850 2550
+Wire Wire Line
+	3850 2550 3850 2600
+Wire Wire Line
+	3850 2550 5000 2550
+Connection ~ 3850 2550
+Wire Wire Line
+	3600 2350 5000 2350
+Connection ~ 3600 2350
+$EndSCHEMATC

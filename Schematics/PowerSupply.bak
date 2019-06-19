@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 8
 Title ""
 Date ""
 Rev ""
@@ -20,10 +20,14 @@ U 1 1 5CC09295
 P 5350 3200
 AR Path="/5CC09295" Ref="U?"  Part="1" 
 AR Path="/5CC08323/5CC09295" Ref="U1"  Part="1" 
-F 0 "U1" H 5350 3567 50  0000 C CNN
-F 1 "LM2576T-5" H 5350 3476 50  0000 C CNN
+F 0 "U1" H 4950 3450 50  0000 L CNN
+F 1 "LM2576T-5" H 5350 3450 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 5350 2950 50  0001 L CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 5350 3200 50  0001 C CNN
+F 4 "X" H 5350 3200 50  0001 C CNN "Spice_Primitive"
+F 5 "LM2576_TRANS" H 5350 3200 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5350 3200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/lengyela/Downloads/LM2576_PSPICE_TRANS/LM2576_TRANS.LIB" H 5350 3200 50  0001 C CNN "Spice_Lib_File"
 	1    5350 3200
 	1    0    0    -1  
 $EndComp
@@ -92,19 +96,6 @@ F 3 "" H 6350 3300 50  0001 C CNN
 	1    6350 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_FET:2N7000 Q?
-U 1 1 5CC092C5
-P 4350 4000
-AR Path="/5CC092C5" Ref="Q?"  Part="1" 
-AR Path="/5CC08323/5CC092C5" Ref="Q1"  Part="1" 
-F 0 "Q1" H 4555 4046 50  0000 L CNN
-F 1 "2N7000" H 4555 3955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4550 3925 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4350 4000 50  0001 L CNN
-	1    4350 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5850 3300 6000 3300
 Wire Wire Line
@@ -132,45 +123,12 @@ Wire Wire Line
 	7800 3400 7800 3900
 Wire Wire Line
 	7800 3900 7300 3900
-Connection ~ 6850 3900
-$Comp
-L Device:C C?
-U 1 1 5CC092DC
-P 7300 3550
-AR Path="/5CC092DC" Ref="C?"  Part="1" 
-AR Path="/5CC08323/5CC092DC" Ref="C3"  Part="1" 
-F 0 "C3" H 7415 3596 50  0000 L CNN
-F 1 "100nF" H 7415 3505 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 7338 3400 50  0001 C CNN
-F 3 "~" H 7300 3550 50  0001 C CNN
-	1    7300 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5CC092E3
-P 8300 3550
-AR Path="/5CC092E3" Ref="C?"  Part="1" 
-AR Path="/5CC08323/5CC092E3" Ref="C4"  Part="1" 
-F 0 "C4" H 8415 3596 50  0000 L CNN
-F 1 "10uF" H 8415 3505 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 8338 3400 50  0001 C CNN
-F 3 "~" H 8300 3550 50  0001 C CNN
-	1    8300 3550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7500 3100 7300 3100
 Wire Wire Line
 	7300 3400 7300 3100
-Connection ~ 7300 3100
-Wire Wire Line
-	7300 3100 7100 3100
 Wire Wire Line
 	7300 3700 7300 3900
-Connection ~ 7300 3900
-Wire Wire Line
-	7300 3900 6850 3900
 Wire Wire Line
 	8300 3400 8300 3100
 Wire Wire Line
@@ -230,8 +188,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 3600 3850 4600
 Wire Wire Line
-	4800 3300 4800 3700
-Wire Wire Line
 	4450 3600 4450 3700
 Wire Wire Line
 	4450 3700 4800 3700
@@ -260,7 +216,6 @@ Wire Wire Line
 Connection ~ 8300 3100
 Wire Wire Line
 	7100 2750 7100 3100
-Connection ~ 7100 3100
 Wire Wire Line
 	7100 3100 6850 3100
 Wire Wire Line
@@ -279,4 +234,57 @@ Text HLabel 8300 2750 1    50   Output ~ 0
 3V3
 Text HLabel 5350 4650 3    50   Input ~ 0
 GND
+$Comp
+L Transistor_FET:2N7000 Q?
+U 1 1 5CC092C5
+P 4350 4000
+AR Path="/5CC092C5" Ref="Q?"  Part="1" 
+AR Path="/5CC08323/5CC092C5" Ref="Q1"  Part="1" 
+F 0 "Q1" H 4555 4046 50  0000 L CNN
+F 1 "2N7000" H 4555 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4550 3925 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4350 4000 50  0001 L CNN
+F 4 "X" H 4350 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "2n7000" H 4350 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4350 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/lengyela/Downloads/2N7000.REV0.LIB" H 4350 4000 50  0001 C CNN "Spice_Lib_File"
+	1    4350 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 3700 0    50   Output ~ 0
+PWR_ON
+Wire Wire Line
+	6850 3900 7300 3900
+Connection ~ 6850 3900
+Connection ~ 7300 3900
+Wire Wire Line
+	7300 3100 7100 3100
+Connection ~ 7300 3100
+Connection ~ 7100 3100
+$Comp
+L Device:CP C3
+U 1 1 5CC77333
+P 7300 3550
+F 0 "C3" H 7418 3596 50  0000 L CNN
+F 1 "10uF" H 7418 3505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P2.50mm" H 7338 3400 50  0001 C CNN
+F 3 "~" H 7300 3550 50  0001 C CNN
+	1    7300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5CC773D4
+P 8300 3550
+F 0 "C4" H 8418 3596 50  0000 L CNN
+F 1 "100uF" H 8418 3505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 8338 3400 50  0001 C CNN
+F 3 "~" H 8300 3550 50  0001 C CNN
+	1    8300 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3700 4450 3700
+Wire Wire Line
+	4800 3300 4800 3700
 $EndSCHEMATC
