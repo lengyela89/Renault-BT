@@ -47,7 +47,7 @@ P 6850 3550
 AR Path="/5CC092AA" Ref="C?"  Part="1" 
 AR Path="/5CC08323/5CC092AA" Ref="C2"  Part="1" 
 F 0 "C2" H 6968 3596 50  0000 L CNN
-F 1 "330uF" H 6968 3505 50  0000 L CNN
+F 1 "470uF" H 6968 3505 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 6888 3400 50  0001 C CNN
 F 3 "~" H 6850 3550 50  0001 C CNN
 	1    6850 3550
@@ -56,29 +56,29 @@ $EndComp
 $Comp
 L pspice:INDUCTOR L?
 U 1 1 5CC092B8
-P 6350 3300
+P 6400 3300
 AR Path="/5CC092B8" Ref="L?"  Part="1" 
 AR Path="/5CC08323/5CC092B8" Ref="L1"  Part="1" 
-F 0 "L1" H 6350 3515 50  0000 C CNN
-F 1 "330uH" H 6350 3424 50  0000 C CNN
-F 2 "Inductor_THT:L_Radial_D10.0mm_P5.00mm_Fastron_07M" H 6350 3300 50  0001 C CNN
-F 3 "" H 6350 3300 50  0001 C CNN
-	1    6350 3300
+F 0 "L1" H 6400 3515 50  0000 C CNN
+F 1 "330uH" H 6400 3424 50  0000 C CNN
+F 2 "Inductor_THT:L_Radial_D10.0mm_P5.00mm_Fastron_07M" H 6400 3300 50  0001 C CNN
+F 3 "" H 6400 3300 50  0001 C CNN
+	1    6400 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5850 3300 6000 3300
 Wire Wire Line
-	6000 3400 6000 3300
+	6000 3450 6000 3300
 Connection ~ 6000 3300
 Wire Wire Line
-	6000 3300 6100 3300
+	6000 3300 6150 3300
 Wire Wire Line
-	6600 3300 6850 3300
+	6650 3300 6850 3300
 Wire Wire Line
 	6850 3300 6850 3400
 Wire Wire Line
-	6000 3700 6000 3900
+	6000 3750 6000 3900
 Wire Wire Line
 	6850 3700 6850 3900
 Wire Wire Line
@@ -91,14 +91,6 @@ Connection ~ 6850 3300
 Connection ~ 6850 3100
 Wire Wire Line
 	7800 3400 7800 3900
-Wire Wire Line
-	7800 3900 7300 3900
-Wire Wire Line
-	7500 3100 7300 3100
-Wire Wire Line
-	7300 3400 7300 3100
-Wire Wire Line
-	7300 3700 7300 3900
 Wire Wire Line
 	8300 3400 8300 3100
 Wire Wire Line
@@ -223,25 +215,8 @@ F 7 "/home/lengyela/Downloads/2N7000.REV0.LIB" H 4350 4000 50  0001 C CNN "Spice
 $EndComp
 Text GLabel 3400 3700 0    50   Output ~ 0
 PWR_ON
-Wire Wire Line
-	6850 3900 7300 3900
 Connection ~ 6850 3900
-Connection ~ 7300 3900
-Wire Wire Line
-	7300 3100 7100 3100
-Connection ~ 7300 3100
 Connection ~ 7100 3100
-$Comp
-L Device:CP C3
-U 1 1 5CC77333
-P 7300 3550
-F 0 "C3" H 7418 3596 50  0000 L CNN
-F 1 "10uF" H 7418 3505 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P2.50mm" H 7338 3400 50  0001 C CNN
-F 3 "~" H 7300 3550 50  0001 C CNN
-	1    7300 3550
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:CP C4
 U 1 1 5CC773D4
@@ -271,12 +246,16 @@ $EndComp
 $Comp
 L Diode:1N5819 D1
 U 1 1 5D11C75B
-P 6000 3550
-F 0 "D1" V 5954 3629 50  0000 L CNN
-F 1 "1N5819" V 6045 3629 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6000 3375 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 6000 3550 50  0001 C CNN
-	1    6000 3550
+P 6000 3600
+F 0 "D1" V 5954 3679 50  0000 L CNN
+F 1 "1N5819" V 6045 3679 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6000 3425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 6000 3600 50  0001 C CNN
+	1    6000 3600
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	6850 3900 7800 3900
+Wire Wire Line
+	7100 3100 7500 3100
 $EndSCHEMATC

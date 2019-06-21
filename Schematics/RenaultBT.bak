@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RenaultBT-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,10 +20,10 @@ U 5CC08323
 F0 "PowerSupply" 50
 F1 "PowerSupply.sch" 50
 F2 "12V" I L 1750 1450 50 
-F3 "HU_ON" I L 1750 1700 50 
+F3 "HU_ON" I L 1750 1950 50 
 F4 "5V" O R 3150 1450 50 
 F5 "3V3" O R 3150 1700 50 
-F6 "GND" I L 1750 1950 50 
+F6 "GND" I L 1750 1700 50 
 $EndSheet
 $Sheet
 S 5000 1300 1500 900 
@@ -51,11 +51,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 1600 5000 1600
 Wire Wire Line
-	1750 1950 1600 1950
-Wire Wire Line
-	1600 1950 1600 2350
-Wire Wire Line
-	1600 2350 4650 2350
+	1450 2350 4650 2350
 Wire Wire Line
 	4650 2350 4650 1700
 Wire Wire Line
@@ -184,4 +180,71 @@ Wire Wire Line
 	4650 3050 4650 4850
 Wire Wire Line
 	4650 4850 4950 4850
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 5D0CF364
+P 850 1700
+F 0 "J1" H 768 1375 50  0000 C CNN
+F 1 "PowerSupply" H 768 1466 50  0000 C CNN
+F 2 "ScrewTerminal:ScrewTerminal_3" H 850 1700 50  0001 C CNN
+F 3 "~" H 850 1700 50  0001 C CNN
+	1    850  1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 1600 1600 1450
+Wire Wire Line
+	1600 1450 1750 1450
+Wire Wire Line
+	1050 1600 1600 1600
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5D0D5FA2
+P 7700 1500
+F 0 "J2" H 7780 1492 50  0000 L CNN
+F 1 "SPDIF_Output" H 7780 1401 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_2" H 7700 1500 50  0001 C CNN
+F 3 "~" H 7700 1500 50  0001 C CNN
+	1    7700 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1500 4650 1100
+Wire Wire Line
+	4650 1100 7050 1100
+Wire Wire Line
+	7050 1100 7050 1500
+Wire Wire Line
+	7050 1500 7500 1500
+Connection ~ 4650 1500
+Wire Wire Line
+	6500 1600 7500 1600
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5D0DD8D3
+P 7750 4450
+F 0 "J3" H 7830 4442 50  0000 L CNN
+F 1 "HU_CDC_Interface" H 7830 4351 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_2" H 7750 4450 50  0001 C CNN
+F 3 "~" H 7750 4450 50  0001 C CNN
+	1    7750 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4450 7550 4450
+Wire Wire Line
+	7550 4550 5750 4550
+Wire Wire Line
+	1450 1700 1750 1700
+Wire Wire Line
+	1450 1700 1450 2350
+Wire Wire Line
+	1450 1700 1050 1700
+Connection ~ 1450 1700
+Wire Wire Line
+	1750 1950 1600 1950
+Wire Wire Line
+	1600 1950 1600 1800
+Wire Wire Line
+	1600 1800 1050 1800
 $EndSCHEMATC

@@ -3,4 +3,5 @@
   (lib (name CSRA64215)(type KiCad)(uri ${KIPRJMOD}/CSRA64215.pretty)(options "")(descr ""))
   (lib (name STM32)(type KiCad)(uri ${KIPRJMOD}/STM32.pretty)(options "")(descr ""))
   (lib (name WM8804)(type KiCad)(uri ${KIPRJMOD}/WM8804.pretty)(options "")(descr ""))
+  (lib (name ScrewTerminal)(type KiCad)(uri ${KIPRJMOD}/ScrewTerminal.pretty)(options "")(descr ""))
 )
