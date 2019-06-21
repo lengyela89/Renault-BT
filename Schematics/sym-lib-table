@@ -1,6 +1,7 @@
 (sym_lib_table
   (lib (name RenaultBT-rescue)(type Legacy)(uri ${KIPRJMOD}/RenaultBT-rescue.lib)(options "")(descr ""))
-  (lib (name CSRA64215)(type Legacy)(uri /home/lengyela/Documents/Projects/Embedded/Renault-BT/Schematics/CSRA64215.lib)(options "")(descr ""))
-  (lib (name SPDIF)(type Legacy)(uri /home/lengyela/Documents/Projects/Embedded/Renault-BT/Schematics/SPDIF.lib)(options "")(descr ""))
-  (lib (name STM32)(type Legacy)(uri /home/lengyela/Documents/Projects/Embedded/Renault-BT/Schematics/STM32.lib)(options "")(descr ""))
+  (lib (name CSRA64215)(type Legacy)(uri ${KIPRJMOD}/CSRA64215.lib)(options "")(descr ""))
+  (lib (name SPDIF)(type Legacy)(uri ${KIPRJMOD}/SPDIF.lib)(options "")(descr ""))
+  (lib (name STM32)(type Legacy)(uri ${KIPRJMOD}/STM32.lib)(options "")(descr ""))
+  (lib (name WM8804)(type Legacy)(uri C:/Users/adam.lengyel/Documents/GIT/Renault-BT/Schematics/WM8804.lib)(options "")(descr ""))
 )

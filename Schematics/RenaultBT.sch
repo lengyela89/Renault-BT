@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RenaultBT-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -184,4 +184,15 @@ Wire Wire Line
 	4650 3050 4650 4850
 Wire Wire Line
 	4650 4850 4950 4850
+$Comp
+L Connector:Screw_Terminal_01x10 J1
+U 1 1 5D0D7B0A
+P 8850 2900
+F 0 "J1" H 8930 2892 50  0000 L CNN
+F 1 "Screw_Terminal_01x10" H 8930 2801 50  0000 L CNN
+F 2 "" H 8850 2900 50  0001 C CNN
+F 3 "~" H 8850 2900 50  0001 C CNN
+	1    8850 2900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
