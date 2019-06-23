@@ -3,5 +3,5 @@
   (lib (name CSRA64215)(type Legacy)(uri ${KIPRJMOD}/CSRA64215.lib)(options "")(descr ""))
   (lib (name SPDIF)(type Legacy)(uri ${KIPRJMOD}/SPDIF.lib)(options "")(descr ""))
   (lib (name STM32)(type Legacy)(uri ${KIPRJMOD}/STM32.lib)(options "")(descr ""))
-  (lib (name WM8804)(type Legacy)(uri C:/Users/adam.lengyel/Documents/GIT/Renault-BT/Schematics/WM8804.lib)(options "")(descr ""))
+  (lib (name WM8804)(type Legacy)(uri ${KIPRJMOD}/WM8804.lib)(options "")(descr ""))
 )
