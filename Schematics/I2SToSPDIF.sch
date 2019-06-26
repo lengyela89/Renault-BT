@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RenaultBT-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -153,7 +153,7 @@ U 1 1 5CCAD3EE
 P 4450 1950
 F 0 "R3" H 4380 1904 50  0000 R CNN
 F 1 "10k" H 4380 1995 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4380 1950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" V 4380 1950 50  0001 C CNN
 F 3 "~" H 4450 1950 50  0001 C CNN
 	1    4450 1950
 	-1   0    0    1   
@@ -251,7 +251,7 @@ U 1 1 5D0A1968
 P 4300 1950
 F 0 "R4" H 4450 1900 50  0000 R CNN
 F 1 "10K" H 4500 2000 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4230 1950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4230 1950 50  0001 C CNN
 F 3 "~" H 4300 1950 50  0001 C CNN
 	1    4300 1950
 	-1   0    0    1   

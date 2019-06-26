@@ -200,13 +200,13 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J2
 U 1 1 5D0D5FA2
-P 7700 1500
-F 0 "J2" H 7780 1492 50  0000 L CNN
-F 1 "SPDIF_Output" H 7780 1401 50  0000 L CNN
-F 2 "ScrewTerminal:ScrewTerminal_2" H 7700 1500 50  0001 C CNN
-F 3 "~" H 7700 1500 50  0001 C CNN
-	1    7700 1500
-	1    0    0    -1  
+P 7700 1600
+F 0 "J2" H 7780 1592 50  0000 L CNN
+F 1 "SPDIF_Output" H 7780 1501 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_2" H 7700 1600 50  0001 C CNN
+F 3 "~" H 7700 1600 50  0001 C CNN
+	1    7700 1600
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	4650 1500 4650 1100
