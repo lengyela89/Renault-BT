@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RenaultBT-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -183,7 +183,7 @@ U 1 1 5CD2DB92
 P 7350 3650
 F 0 "R5" V 7143 3650 50  0000 C CNN
 F 1 "374" V 7234 3650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7280 3650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7280 3650 50  0001 C CNN
 F 3 "~" H 7350 3650 50  0001 C CNN
 	1    7350 3650
 	0    1    1    0   
