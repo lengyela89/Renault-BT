@@ -4,4 +4,5 @@
   (lib (name SPDIF)(type Legacy)(uri ${KIPRJMOD}/SPDIF.lib)(options "")(descr ""))
   (lib (name STM32)(type Legacy)(uri ${KIPRJMOD}/STM32.lib)(options "")(descr ""))
   (lib (name WM8804)(type Legacy)(uri ${KIPRJMOD}/WM8804.lib)(options "")(descr ""))
+  (lib (name LM3940)(type Legacy)(uri ${KIPRJMOD}/LM3940.lib)(options "")(descr ""))
 )

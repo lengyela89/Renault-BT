@@ -15,19 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Regulator_Linear:LM1117-3.3 U?
-U 1 1 5CC0929C
-P 7800 3100
-AR Path="/5CC0929C" Ref="U?"  Part="1" 
-AR Path="/5CC08323/5CC0929C" Ref="U2"  Part="1" 
-F 0 "U2" H 7800 3342 50  0000 C CNN
-F 1 "LM1117-3.3" H 7800 3251 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7800 3100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 7800 3100 50  0001 C CNN
-	1    7800 3100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP C?
 U 1 1 5CC092A3
 P 3850 3450
@@ -90,11 +77,9 @@ Wire Wire Line
 Connection ~ 6850 3300
 Connection ~ 6850 3100
 Wire Wire Line
-	7800 3400 7800 3900
-Wire Wire Line
 	8300 3400 8300 3100
 Wire Wire Line
-	8300 3100 8100 3100
+	8300 3100 8250 3100
 Wire Wire Line
 	8300 3700 8300 3900
 Wire Wire Line
@@ -216,7 +201,6 @@ $EndComp
 Text GLabel 3400 3700 0    50   Output ~ 0
 PWR_ON
 Connection ~ 6850 3900
-Connection ~ 7100 3100
 $Comp
 L Device:CP C4
 U 1 1 5CC773D4
@@ -257,5 +241,19 @@ $EndComp
 Wire Wire Line
 	6850 3900 7800 3900
 Wire Wire Line
-	7100 3100 7500 3100
+	7100 3100 7350 3100
+Connection ~ 7100 3100
+Wire Wire Line
+	7800 3500 7800 3900
+$Comp
+L LM3940:LM3940 U2
+U 1 1 5D31086E
+P 7800 3100
+F 0 "U2" H 7800 3415 50  0000 C CNN
+F 1 "LM3940" H 7800 3324 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7750 3100 50  0001 C CNN
+F 3 "" H 7750 3100 50  0001 C CNN
+	1    7800 3100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
