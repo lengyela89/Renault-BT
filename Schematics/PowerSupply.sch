@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RenaultBT-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -206,8 +206,8 @@ L Device:CP C4
 U 1 1 5CC773D4
 P 8300 3550
 F 0 "C4" H 8418 3596 50  0000 L CNN
-F 1 "100uF" H 8418 3505 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 8338 3400 50  0001 C CNN
+F 1 "470uF" H 8418 3505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 8338 3400 50  0001 C CNN
 F 3 "~" H 8300 3550 50  0001 C CNN
 	1    8300 3550
 	1    0    0    -1  
