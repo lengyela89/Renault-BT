@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/lengyela/Documents/Projects/Embedded/Renault-BT/Schematics/RenaultBT.sch)
-    (date "Thu 08 Aug 2019 11:10:16 PM CEST")
+    (date "Fri 09 Aug 2019 12:23:31 AM CEST")
     (tool "Eeschema 5.0.2+dfsg1-1~bpo9+1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -297,7 +297,7 @@
       (tstamp 5CD2DB92))
     (comp (ref R6)
       (value 110)
-      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal)
+      (footprint Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal)
       (datasheet ~)
       (libsource (lib Device) (part R) (description Resistor))
       (sheetpath (names /I2SToSPDIF/SPDIFOutput_buffered/) (tstamps /5CCA0E0E/5CD29B0B/))
