@@ -189,7 +189,7 @@ AR Path="/5CC092C5" Ref="Q?"  Part="1"
 AR Path="/5CC08323/5CC092C5" Ref="Q1"  Part="1" 
 F 0 "Q1" H 4555 4046 50  0000 L CNN
 F 1 "2N7000" H 4555 3955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4550 3925 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4550 3925 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4350 4000 50  0001 L CNN
 F 4 "X" H 4350 4000 50  0001 C CNN "Spice_Primitive"
 F 5 "2n7000" H 4350 4000 50  0001 C CNN "Spice_Model"

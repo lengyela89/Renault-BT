@@ -155,8 +155,8 @@ F0 "HU_CDC_InterfaceAdapter" 50
 F1 "HU_CDC_InterfaceAdapter.sch" 50
 F2 "GND" I L 4950 4850 50 
 F3 "CDC_TX" I L 4950 4450 50 
-F4 "HU_RX" O R 5750 4450 50 
-F5 "HU_TX" I R 5750 4550 50 
+F4 "HU_RX" O R 5750 4550 50 
+F5 "HU_TX" I R 5750 4450 50 
 F6 "CDC_RX" O L 4950 4550 50 
 F7 "3V3" I L 4950 4750 50 
 $EndSheet
@@ -247,4 +247,37 @@ Wire Wire Line
 	1600 1950 1600 1800
 Wire Wire Line
 	1600 1800 1050 1800
+$Comp
+L Connector:Screw_Terminal_01x03 J6
+U 1 1 5D463BB8
+P 7750 4100
+F 0 "J6" H 7830 4142 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 7830 4051 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_3" H 7750 4100 50  0001 C CNN
+F 3 "~" H 7750 4100 50  0001 C CNN
+	1    7750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J5
+U 1 1 5D463C02
+P 7750 3750
+F 0 "J5" H 7830 3792 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 7830 3701 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_3" H 7750 3750 50  0001 C CNN
+F 3 "~" H 7750 3750 50  0001 C CNN
+	1    7750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5D463CE6
+P 7750 3300
+F 0 "J4" H 7830 3292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7830 3201 50  0000 L CNN
+F 2 "ScrewTerminal:ScrewTerminal_2" H 7750 3300 50  0001 C CNN
+F 3 "~" H 7750 3300 50  0001 C CNN
+	1    7750 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
