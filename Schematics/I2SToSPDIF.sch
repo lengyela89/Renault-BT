@@ -15,11 +15,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	4150 3300 4450 3300
+	4150 3450 4450 3450
 Wire Wire Line
-	4150 3250 4150 3300
+	4150 3300 4150 3450
 Wire Wire Line
-	4150 2950 4150 2900
+	4150 3000 4150 2900
 Wire Wire Line
 	6500 2100 6500 2150
 Wire Wire Line
@@ -31,20 +31,20 @@ Wire Wire Line
 Wire Wire Line
 	6150 2400 6150 2100
 Wire Wire Line
-	4450 3000 4450 3300
+	4450 3000 4450 3450
 Wire Wire Line
 	4600 3000 4450 3000
 $Comp
 L Device:C C?
 U 1 1 5CCA1ADD
-P 4150 3100
+P 4150 3150
 AR Path="/5CCA1ADD" Ref="C?"  Part="1" 
 AR Path="/5CCA0E0E/5CCA1ADD" Ref="C5"  Part="1" 
-F 0 "C5" H 4265 3146 50  0000 L CNN
-F 1 "1uF" H 4265 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4188 2950 50  0001 C CNN
-F 3 "~" H 4150 3100 50  0001 C CNN
-	1    4150 3100
+F 0 "C5" H 4265 3196 50  0000 L CNN
+F 1 "1uF" H 4265 3105 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4188 3000 50  0001 C CNN
+F 3 "~" H 4150 3150 50  0001 C CNN
+	1    4150 3150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -117,15 +117,15 @@ F 3 "" H 5350 2500 50  0001 C CNN
 $EndComp
 Text HLabel 7050 2100 2    50   Input ~ 0
 DVDD
-Text HLabel 3350 3200 0    50   Input ~ 0
+Text HLabel 3250 3350 0    50   Input ~ 0
 PVDD
-Text HLabel 3350 3300 0    50   Input ~ 0
+Text HLabel 3250 3450 0    50   Input ~ 0
 PGND
 Text HLabel 7050 2500 2    50   Input ~ 0
 DGND
 Wire Wire Line
 	4150 2900 4600 2900
-Connection ~ 4150 3300
+Connection ~ 4150 3450
 Connection ~ 6500 2500
 Wire Wire Line
 	7050 2100 6950 2100
@@ -135,11 +135,11 @@ Wire Wire Line
 Wire Wire Line
 	6000 2500 6150 2500
 Connection ~ 6150 2500
-Text HLabel 3350 2300 0    50   Input ~ 0
+Text HLabel 3250 2300 0    50   Input ~ 0
 SCLK
-Text HLabel 3350 2500 0    50   BiDi ~ 0
+Text HLabel 3250 2500 0    50   BiDi ~ 0
 SDIN
-Text HLabel 3350 2800 0    50   Input ~ 0
+Text HLabel 3250 2750 0    50   Input ~ 0
 RESETB
 Connection ~ 6850 2500
 Wire Wire Line
@@ -259,12 +259,12 @@ $EndComp
 $Comp
 L Transistor_FET:2N7000 Q3
 U 1 1 5D0A1A0C
-P 3600 2800
-F 0 "Q3" H 3800 2950 50  0000 L CNN
-F 1 "2N7000" H 3800 2850 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3800 2725 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3600 2800 50  0001 L CNN
-	1    3600 2800
+P 3600 2750
+F 0 "Q3" H 3800 2900 50  0000 L CNN
+F 1 "2N7000" H 3800 2800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3800 2675 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3600 2750 50  0001 L CNN
+	1    3600 2750
 	1    0    0    -1  
 $EndComp
 Connection ~ 4450 1700
@@ -273,44 +273,63 @@ Wire Wire Line
 Wire Wire Line
 	4300 1700 4450 1700
 Wire Wire Line
-	3350 3200 4000 3200
+	3250 3350 4000 3350
 Wire Wire Line
-	4000 3200 4000 2900
+	4000 3350 4000 2900
 Wire Wire Line
 	4000 2900 4150 2900
 Connection ~ 4150 2900
 Wire Wire Line
 	4600 2400 4550 2400
 Wire Wire Line
-	4300 2100 4300 2600
+	4300 2100 4300 2550
 Wire Wire Line
 	4300 2800 4600 2800
 Wire Wire Line
-	3350 3300 4150 3300
-Text HLabel 3350 3050 0    50   Input ~ 0
+	3250 3450 4150 3450
+Text HLabel 3250 3250 0    50   Input ~ 0
 DGND
 Wire Wire Line
-	3700 2600 4300 2600
-Connection ~ 4300 2600
+	3700 2550 4300 2550
+Connection ~ 4300 2550
 Wire Wire Line
-	4300 2600 4300 2800
+	4300 2550 4300 2800
 Wire Wire Line
-	3350 3050 3700 3050
+	3250 3250 3400 3250
 Wire Wire Line
-	3700 3050 3700 3000
+	3700 3250 3700 2950
 Wire Wire Line
-	3350 2800 3400 2800
+	3250 2750 3400 2750
 Wire Wire Line
-	3700 3050 3850 3050
+	3700 3250 3850 3250
 Wire Wire Line
-	3850 3050 3850 2850
+	3850 3250 3850 2850
 Wire Wire Line
 	3850 2850 4550 2850
 Wire Wire Line
 	4550 2850 4550 2400
-Connection ~ 3700 3050
+Connection ~ 3700 3250
 Wire Wire Line
-	3350 2500 4600 2500
+	3250 2500 4600 2500
 Wire Wire Line
-	3350 2300 4600 2300
+	3250 2300 4600 2300
+$Comp
+L Device:R R28
+U 1 1 5D51D75E
+P 3400 3000
+F 0 "R28" H 3470 3046 50  0000 L CNN
+F 1 "10K" H 3470 2955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 3330 3000 50  0001 C CNN
+F 3 "~" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3150 3400 3250
+Connection ~ 3400 3250
+Wire Wire Line
+	3400 3250 3700 3250
+Wire Wire Line
+	3400 2850 3400 2750
+Connection ~ 3400 2750
 $EndSCHEMATC
