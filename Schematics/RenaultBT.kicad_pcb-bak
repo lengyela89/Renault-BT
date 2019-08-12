@@ -3065,7 +3065,7 @@
   )
 
   (module ScrewTerminal:ScrewTerminal_2 (layer F.Cu) (tedit 5D0CB562) (tstamp 5D5C7969)
-    (at 203.2 72.39 90)
+    (at 203.2 73.66 90)
     (path /5D463CE6)
     (fp_text reference J4 (at 0 -5.08 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3082,7 +3082,7 @@
   )
 
   (module ScrewTerminal:ScrewTerminal_3 (layer F.Cu) (tedit 5D0CB644) (tstamp 5D5C794C)
-    (at 203.2 85.09 90)
+    (at 203.2 86.36 90)
     (path /5D463C02)
     (fp_text reference J5 (at 0 -5.08 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3100,7 +3100,7 @@
   )
 
   (module ScrewTerminal:ScrewTerminal_3 (layer F.Cu) (tedit 5D0CB644) (tstamp 5D5C7985)
-    (at 203.2 100.33 90)
+    (at 203.2 101.6 90)
     (path /5D463BB8)
     (fp_text reference J6 (at 0 -5.08 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
