@@ -4,4 +4,5 @@
   (lib (name STM32)(type KiCad)(uri ${KIPRJMOD}/STM32.pretty)(options "")(descr ""))
   (lib (name WM8804)(type KiCad)(uri ${KIPRJMOD}/WM8804.pretty)(options "")(descr ""))
   (lib (name ScrewTerminal)(type KiCad)(uri ${KIPRJMOD}/ScrewTerminal.pretty)(options "")(descr ""))
+  (lib (name GTL2003)(type KiCad)(uri ${KIPRJMOD}/GTL2003.pretty)(options "")(descr ""))
 )

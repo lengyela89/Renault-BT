@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 8
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -143,7 +143,6 @@ Text HLabel 8250 3150 2    50   Input ~ 0
 GND
 Wire Wire Line
 	8250 3150 6750 3150
-NoConn ~ 6750 3050
 NoConn ~ 6750 3350
 NoConn ~ 6750 3650
 NoConn ~ 6750 3750
@@ -189,4 +188,5 @@ Text HLabel 4300 3550 0    50   Output ~ 0
 UART_TX
 Wire Wire Line
 	4300 3550 5050 3550
+NoConn ~ 6750 3050
 $EndSCHEMATC

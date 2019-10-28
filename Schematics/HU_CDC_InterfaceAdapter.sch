@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L Transistor_FET:2N7000 Q2
 U 1 1 5D113680
-P 4100 2750
-F 0 "Q2" H 4305 2796 50  0000 L CNN
-F 1 "2N7000" H 4305 2705 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4300 2675 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4100 2750 50  0001 L CNN
-	1    4100 2750
+P 4100 2650
+F 0 "Q2" H 4305 2696 50  0000 L CNN
+F 1 "2N7000" H 4305 2605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4300 2575 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4100 2650 50  0001 L CNN
+	1    4100 2650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -39,13 +39,13 @@ $EndComp
 $Comp
 L Device:R R24
 U 1 1 5D11378B
-P 3550 2750
-F 0 "R24" V 3343 2750 50  0000 C CNN
-F 1 "100" V 3434 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3480 2750 50  0001 C CNN
-F 3 "~" H 3550 2750 50  0001 C CNN
-	1    3550 2750
-	0    1    1    0   
+P 3850 2850
+F 0 "R24" V 3643 2850 50  0000 C CNN
+F 1 "10K" V 3734 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 3780 2850 50  0001 C CNN
+F 3 "~" H 3850 2850 50  0001 C CNN
+	1    3850 2850
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R25
@@ -69,25 +69,14 @@ F 3 "~" H 4200 4150 50  0001 C CNN
 	1    4200 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3700 2750 3900 2750
 Text HLabel 3650 3050 0    50   Input ~ 0
 GND
-Wire Wire Line
-	4200 2950 4200 3050
-Wire Wire Line
-	4200 3050 3650 3050
-Text HLabel 3000 2750 0    50   Input ~ 0
+Text HLabel 3000 2650 0    50   Input ~ 0
 CDC_TX
-Wire Wire Line
-	3000 2750 3400 2750
-Text HLabel 4750 2350 2    50   Output ~ 0
+Text HLabel 4750 2250 2    50   Output ~ 0
 HU_RX
 Wire Wire Line
-	4200 2550 4200 2350
-Wire Wire Line
-	4200 2350 4750 2350
-Connection ~ 4200 3050
+	4200 2450 4200 2250
 Text HLabel 4750 3400 2    50   Input ~ 0
 HU_TX
 Text HLabel 2950 3800 0    50   Output ~ 0
@@ -109,4 +98,36 @@ Wire Wire Line
 Connection ~ 4200 3800
 Wire Wire Line
 	4200 3800 4200 3600
+Connection ~ 3850 2650
+Wire Wire Line
+	3850 2650 3900 2650
+Wire Wire Line
+	3000 2650 3850 2650
+Wire Wire Line
+	3650 3050 3850 3050
+Wire Wire Line
+	3850 2700 3850 2650
+Wire Wire Line
+	3850 3000 3850 3050
+Connection ~ 3850 3050
+Wire Wire Line
+	3850 3050 4200 3050
+Wire Wire Line
+	4200 2850 4200 3050
+Connection ~ 4200 3050
+$Comp
+L Device:R R10
+U 1 1 5DB88B27
+P 4450 2250
+F 0 "R10" V 4243 2250 50  0000 C CNN
+F 1 "470" V 4334 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4380 2250 50  0001 C CNN
+F 3 "~" H 4450 2250 50  0001 C CNN
+	1    4450 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 2250 4200 2250
+Wire Wire Line
+	4600 2250 4750 2250
 $EndSCHEMATC

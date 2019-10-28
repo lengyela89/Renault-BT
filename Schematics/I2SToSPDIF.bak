@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -319,7 +319,7 @@ U 1 1 5D51D75E
 P 3400 3000
 F 0 "R28" H 3470 3046 50  0000 L CNN
 F 1 "10K" H 3470 2955 50  0000 L CNN
-F 2 "" V 3330 3000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 3330 3000 50  0001 C CNN
 F 3 "~" H 3400 3000 50  0001 C CNN
 	1    3400 3000
 	1    0    0    -1  
