@@ -41,6 +41,7 @@
 #include "stm32f1xx_hal.h"
 
 /* USER CODE BEGIN Includes */
+#include <WM8804.h>
 #include <CDCEmulator.h>
 /* USER CODE END Includes */
 
@@ -101,6 +102,77 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
+  WM8804_initialize(
+		  &hi2c1,
+		  0x76u,
+		  (WM8804_ResetPinConfig) {
+	  	  	  .GPIOPeripheral = WM8804_RESET_GPIO_Port,
+	  	  	  .GPIOPin = WM8804_RESET_Pin,
+			  .activeLow = false
+  	  	  });
+
+  WM8804_registers_t *registers = NULL;
+  WM8804_getRegisterConfigs(&registers);
+
+  registers->PLL4.R.TXVAL_OVWR = 0b0;
+  registers->PLL4.R.TXVAL_SF1 = 0b0;
+  registers->PLL4.R.TXVAL_SF0 = 0b0;
+  registers->PLL4.R.PRESCALE = 0b0;
+  registers->PLL4.R.PLL_N = 0b1000;
+
+  registers->PLL3.R.PLL_K__21_16 = 0b001100;
+
+  registers->PLL2.R.PLL_K__15_8 = 0b01001001;
+
+  registers->PLL1.R.PLL_K__7_0 = 0b10111010;
+
+  registers->PLL5.R.CLKOUTDIV = 0b11;
+  registers->PLL5.R.MCLKDIV = 0b1;
+  registers->PLL5.R.FRACEN = 0b1;
+  registers->PLL5.R.FREQMODE = 0b10;
+
+  registers->PLL6.R.MCLKSRC = 0b0;
+  registers->PLL6.R.ALWAYSVALID = 0b0;
+  registers->PLL6.R.FILLMODE = 0b0;
+  registers->PLL6.R.CLKOUTDIS = 0b1;
+  registers->PLL6.R.CLKOUTSRC = 0b0;
+
+  registers->SPDTX1.R.CHSTMODE = 0b00;				//Channel status mode - ?
+  registers->SPDTX1.R.DEEMPH = 0b000;				//Additional Format Information - Data from Audio Interface has no preemphasis - ?
+  registers->SPDTX1.R.CPY_N = 0b0;					//Copyright Information - Transmitted data has copyright asserted
+  registers->SPDTX1.R.AUDIO_N = 0b0;				//Linear PCM identification - S/PDIF transmitted data is audio PCM
+  registers->SPDTX1.R.CON_PRO = 0b0;				//Use of channel status block - Consumer mode
+
+  registers->SPDTX3.R.CHNUM2 = 0b10;				//Send to Right channel
+  registers->SPDTX3.R.CHNUM1 = 0b01;				//Send to Left channel
+  registers->SPDTX3.R.SRCNUM = 0b0000;				//Source number - ?
+
+  registers->SPDTX4.R.TXSTATSRC = 0b0;
+  registers->SPDTX4.R.TXSRC = 0b1;					//Digital Audio Interface Received Data
+  registers->SPDTX4.R.CLKACU = 0b11;				//Interface frame rate not matched to sampling frequency
+  registers->SPDTX4.R.FREQ = 0b0001;				//Sampling Frequency not indicated
+
+  registers->SPDTX5.R.ORGSAMP = 0b000;				//?
+  registers->SPDTX5.R.TXWL = 0b001;					//001 (MAXWL==1 => 20 bits)
+  registers->SPDTX5.R.MAXWL = 0b1;					//Maximum Audio Sample Word Length - 24 bits
+
+  registers->AIFRX.R.SYNC_OFF = 0b1;				//?
+  registers->AIFRX.R.AIF_MS = 0b1;					//Master mode
+  registers->AIFRX.R.AIFRX_LRP = 0b1;				//Invert LRCK polarity
+  registers->AIFRX.R.AIFRX_BCP = 0b0;				//BCLK not inverted
+  registers->AIFRX.R.AIFRX_WL = 0b01;				//20 bit
+  registers->AIFRX.R.AIFRX_FMT = 0b01;				//Left justified mode
+
+  registers->PWRDN.R.TRIOP = 0b0;					//Outputs are not tri-stated
+  registers->PWRDN.R.AIFPD = 0b0;					//Digital Audio Interface - Power Up
+  registers->PWRDN.R.OSCPD = 0b0;					//Oscillator - Power Up
+  registers->PWRDN.R.SPDIFTXPD = 0b0;				//S/PDIF Transmitter - Enabled
+  registers->PWRDN.R.SPDIFRXPD = 0b1;				//S/PDIF Receiver - Disabled
+  registers->PWRDN.R.PLLPD = 0b0;					//PLL - Enabled
+
+  WM8804_Rc wmRc = WM8804_writeConfig();
+
+
   CDCE_Config cdceConfig = {.huart = &huart1};
 
   CDCE_Rc rc = CDCE_configure(cdceConfig);
