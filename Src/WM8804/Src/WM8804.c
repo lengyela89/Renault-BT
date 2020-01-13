@@ -5,6 +5,8 @@
  *      Author: lengyela
  */
 
+//TODO add separators
+
 #include "WM8804.h"
 
 
