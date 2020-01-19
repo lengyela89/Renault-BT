@@ -8,23 +8,47 @@
 #ifndef WM8804_H_
 #define WM8804_H_
 
+/* -- Includes ----------------------------------------------------------------------- */
 #include "stm32f1xx_hal.h"
 #include <stdbool.h>
 
-
-#define WM8804_I2C__ADDRESS_START   0x74u
-#define WM8804_I2C__ADDRESS_END     0x77u
+/* -- Defines ------------------------------------------------------------------------ */
+#define WM8804_I2C__ADDRESS_START   0x74u       // Valid I2C addresses - start point
+#define WM8804_I2C__ADDRESS_END     0x77u       // Valid I2C addresses - end point (inclusive)
+#define WM8804_I2C__ADDRESS_INVALID 0x00u       // Invalid I2C address
 #define WM8804_I2C__RETRY           0x03u       // I2C number of retries
 #define WM8804_I2C__TIMEOUT         100u        // I2C timeout in ms
 
-#define WM8804_RC__OK                   0u
-#define WM8804_RC__E_HAL                1u
-#define WM8804_RC__E_NULL               2u
-#define WM8804_RC__E_NOT_INITED         3u
-#define WM8804_RC__E_INVALID_ADDRESS    4u
+//Error codes
+#define WM8804_RC__OK                   0u      // OK
+#define WM8804_RC__E_HAL                1u      // HAL error
+#define WM8804_RC__E_NULL               2u      // NULL pointer
+#define WM8804_RC__E_NOT_INITED         3u      // Library is not initialized
+#define WM8804_RC__E_INVALID_ADDRESS    4u      // The address is invalid
 
+//Register initial values
+#define REG_PLL1__INIT          0b00100001
+#define REG_PLL2__INIT          0b11111101
+#define REG_PLL3__INIT          0b00110110
+#define REG_PLL4__INIT          0b00000111
+#define REG_PLL5__INIT          0b00010110
+#define REG_PLL6__INIT          0b00011000
+#define REG_SPDMODE__INIT       0b11111111
+#define REG_INTMASK__INIT       0b00000000
+#define REG_SPDTX1__INIT        0b00000000
+#define REG_SPDTX2__INIT        0b00000000
+#define REG_SPDTX3__INIT        0b00000000
+#define REG_SPDTX4__INIT        0b01110001
+#define REG_SPDTX5__INIT        0b00001011
+#define REG_GPO0__INIT          0b01110000
+#define REG_GPO1__INIT          0b01010111
+#define REG_GPO2__INIT          0b01000010
+#define REG_AIFTX__INIT         0b00000110
+#define REG_AIFRX__INIT         0b00000110
+#define REG_SPDRX1__INIT        0b10000000
+#define REG_PWRDN__INIT         0b00000111
 
-
+/* -- Typedefs ----------------------------------------------------------------------- */
 typedef uint32_t WM8804_Rc;
 typedef uint16_t WM8804_DeviceAddr;
 typedef uint8_t  WM8804_RegisterAddr;
@@ -328,11 +352,10 @@ typedef union {
     } R;
 } WM8804_R30_t;
 
-//TODO
 typedef struct {
     WM8804_R00_t RST__DEVID1;       //Write for RESET; Read device ID
-    WM8804_R01_t DEVID2;            //Readonly
-    WM8804_R02_t DEVREV;            //Readonly
+    WM8804_R01_t DEVID2;            //Read only
+    WM8804_R02_t DEVREV;            //Read only
     WM8804_R03_t PLL1;
     WM8804_R04_t PLL2;
     WM8804_R05_t PLL3;
@@ -341,13 +364,13 @@ typedef struct {
     WM8804_R08_t PLL6;
     WM8804_R09_t SPDMODE;
     WM8804_R10_t INTMASK;
-    WM8804_R11_t INTSTAT;           //Readonly
-    WM8804_R12_t SPDSTAT;           //Readonly
-    WM8804_R13_t RXCHAN1;           //Readonly
-    WM8804_R14_t RXCHAN2;           //Readonly
-    WM8804_R15_t RXCHAN3;           //Readonly
-    WM8804_R16_t RXCHAN4;           //Readonly
-    WM8804_R17_t RXCHAN5;           //Readonly
+    WM8804_R11_t INTSTAT;           //Read only
+    WM8804_R12_t SPDSTAT;           //Read only
+    WM8804_R13_t RXCHAN1;           //Read only
+    WM8804_R14_t RXCHAN2;           //Read only
+    WM8804_R15_t RXCHAN3;           //Read only
+    WM8804_R16_t RXCHAN4;           //Read only
+    WM8804_R17_t RXCHAN5;           //Read only
     WM8804_R18_t SPDTX1;
     WM8804_R19_t SPDTX2;
     WM8804_R20_t SPDTX3;
@@ -395,33 +418,63 @@ typedef enum {
     REG_PWRDN       = 0x1Eu
 } WM8804_Register;
 
-
-#define REG_PLL1__INIT          0b00100001
-#define REG_PLL2__INIT          0b11111101
-#define REG_PLL3__INIT          0b00110110
-#define REG_PLL4__INIT          0b00000111
-#define REG_PLL5__INIT          0b00010110
-#define REG_PLL6__INIT          0b00011000
-#define REG_SPDMODE__INIT       0b11111111
-#define REG_INTMASK__INIT       0b00000000
-#define REG_SPDTX1__INIT        0b00000000
-#define REG_SPDTX2__INIT        0b00000000
-#define REG_SPDTX3__INIT        0b00000000
-#define REG_SPDTX4__INIT        0b01110001
-#define REG_SPDTX5__INIT        0b00001011
-#define REG_GPO0__INIT          0b01110000
-#define REG_GPO1__INIT          0b01010111
-#define REG_GPO2__INIT          0b01000010
-#define REG_AIFTX__INIT         0b00000110
-#define REG_AIFRX__INIT         0b00000110
-#define REG_SPDRX1__INIT        0b10000000
-#define REG_PWRDN__INIT         0b00000111
-
-
+/* -- Prototypes --------------------------------------------------------------------- */
+/**
+ * Initializes the WM8804 library.
+ *
+ * @param hi2c              I2C handler for the communication with WM8804 module
+ * @param deviceAddress     I2C address of the WM8804 module
+ * @param resetPinConfig    Configuration of the reset pin on which WM8804 can be reseted
+ */
 WM8804_Rc WM8804_initialize(I2C_HandleTypeDef *hi2c, WM8804_DeviceAddr deviceAddress, WM8804_ResetPinConfig resetPinConfig);
+
+/**
+ * Helper function that configures WM8804 module to work together properly with the used bluetooth module.
+ */
+WM8804_Rc WM8804_configureModule(void);
+
+/**
+ * Clears the cached register configuration and initializes it with the default values.
+ */
 void WM8804_clearRegisterConfigs(void);
+
+/**
+ * Request a hardware reset on WM8804 module (based on the given reset pin configuration).
+ */
 WM8804_Rc WM8804_doHardwareReset(void);
+
+/**
+ * Returns a pointer to the cached register configuration values.
+ *
+ * @param[out] registerConfigs  Cached register configuration values
+ */
 WM8804_Rc WM8804_getRegisterConfigs(WM8804_registers_t **registerConfigs);
+
+/**
+ * Helper function to find the device address of the WM8804 module.
+ *
+ * @param[in]   hi2c        I2C handler for the communication with WM8804 module
+ * @param[out]  devAddr     The I2C address of the WM8804 module on success; otherwise WM8804_I2C__ADDRESS_INVALID
+ */
 WM8804_Rc WM8804_getDeviceAddress(I2C_HandleTypeDef *hi2c, uint16_t *devAddr);
+
+/**
+ * Writes the module's configuration registers according to the previously set
+ *  values. Only those registers are written, which has been changed
+ *  from their default value.
+ *
+ *  It also handles the whole configuration process (restarts the hardware,
+ *  disables the internal modules before configure them and enables them at the end
+ *  of the configuration phase).
+ */
+WM8804_Rc WM8804_writeConfig(void);
+
+/**
+ * Writes the given value to the selected register.
+ *
+ * @param regAddr[in]   The address of the written register
+ * @param value[in]     The register's new value
+ */
+WM8804_Rc WM8804_writeRegister(WM8804_RegisterAddr regAddr, WM8804_registerRaw_t value);
 
 #endif /* WM8804_H_ */
