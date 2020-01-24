@@ -9,11 +9,11 @@
 #define CDCEMULATOR_INC_CDCEMULATOR_H_
 
 
-//-------- Includes ---------------------------------------------------------//
+/* -- Includes ----------------------------------------------------------------------- */
 #include <stdbool.h>
 #include <stm32f1xx_hal.h>
 
-//-------- Defines ----------------------------------------------------------//
+/* -- Defines ------------------------------------------------------------------------ */
 #define CDCE_RC__OK							0u
 #define CDCE_RC__CONFIGURING_NOT_ALLOWED	1u
 #define CDCE_RC__INVALID_UART_HANDLE		2u
@@ -23,7 +23,7 @@
 #define CDCE_RC__INVALID_MESSAGE_TYPE		6u
 
 
-//-------- Typedefs ---------------------------------------------------------//
+/* -- Typedefs ----------------------------------------------------------------------- */
 typedef void (*CDCE_EventHandler)(void);
 
 typedef struct {
@@ -34,7 +34,7 @@ typedef struct {
 typedef uint8_t CDCE_Rc;
 
 
-//-------- Function prototypes ----------------------------------------------//
+/* -- Prototypes --------------------------------------------------------------------- */
 CDCE_Rc CDCE_configure(CDCE_Config);
 
 CDCE_Rc CDCE_start(void);

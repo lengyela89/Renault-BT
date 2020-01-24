@@ -6,12 +6,12 @@
  */
 
 
-//-------- Includes ---------------------------------------------------------//
+/* -- Includes ----------------------------------------------------------------------- */
 #include <CDCEmulator.h>
 #include <CDCEMessage.h>
 
 
-//-------- Defines ----------------------------------------------------------//
+/* -- Defines ------------------------------------------------------------------------ */
 #define CDCE_STATE__NONE			0x00u
 #define CDCE_STATE__NOT_CONFIGURED	0x01u
 #define CDCE_STATE__CONFIGURED		0x02u
@@ -19,8 +19,6 @@
 #define CDCE_STATE__STANDBY			0x04u
 #define CDCE_STATE__PLAYING			0x05u
 #define CDCE_STATE__ERROR			0x06u
-
-
 
 #define CDCE_TIMEOUT__SEND						500u
 #define CDCE_TIMEOUT__RECEIVE_ACK				50u
@@ -32,12 +30,13 @@
 #define CDCE_MAX_PERIODIC_RETRY__SEND	0x03u
 
 
-//-------- Typedefs ---------------------------------------------------------//
+/* -- Typedefs ----------------------------------------------------------------------- */
 typedef uint8_t	CDCE_State;
 
 typedef uint32_t CDCE_Timeout;
 
-//-------- Variables --------------------------------------------------------//
+
+/* -- Variables ---------------------------------------------------------------------- */
 static CDCEM_Message txMessage;
 static CDCEM_Message rxMessage;
 
@@ -48,7 +47,8 @@ static CDCE_State currentState	= CDCE_STATE__NOT_CONFIGURED;
 static CDCE_State nextState		= CDCE_STATE__NONE;
 static volatile CDCE_Config config;
 
-//-------- Local function prototypes ----------------------------------------//
+
+/* -- Prototypes --------------------------------------------------------------------- */
 static bool sendMessage(void);
 static bool receiveMessage(CDCE_Timeout *timeout);
 static bool waitingForMessage(const CDCEM_PayloadType payloadType, CDCE_Timeout*);
@@ -61,7 +61,7 @@ static void onExecuteTransitionAction(CDCE_State from, CDCE_State to);
 static void changeState(CDCE_State state);
 
 
-//-------- Functions --------------------------------------------------------//
+/* -- Functions ---------------------------------------------------------------------- */
 static bool sendMessage(void)
 {
 	HAL_StatusTypeDef 	status 			= HAL_ERROR;

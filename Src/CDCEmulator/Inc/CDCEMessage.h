@@ -9,12 +9,12 @@
 #define CDCEMULATOR_INC_CDCEMESSAGE_H_
 
 
-/* -- Includes -------------------------------------------------- */
+/* -- Includes ----------------------------------------------------------------------- */
 #include <stdbool.h>
 #include <stm32f1xx_hal.h>
 
 
-/* -- Defines --------------------------------------------------- */
+/* -- Defines ------------------------------------------------------------------------ */
 #define CDCEM_MESSAGE_SIZE__MAX		0x0Fu
 
 #define CDCEM_DATA_LEN__MIN			0x01u
@@ -67,7 +67,8 @@
 #define CDCEM_RC__E_MESSAGE_INVALID			0x04u
 #define CDCEM_RC__E_CRC						0x05u
 
-/* -- Types ----------------------------------------------------- */
+
+/* -- Typedefs ----------------------------------------------------------------------- */
 typedef uint8_t CDCEM_Rc;
 typedef uint8_t CDCEM_Crc;
 typedef uint8_t CDCEM_Idx;
@@ -78,7 +79,7 @@ typedef uint8_t CDCEM_PayloadType;
 typedef uint8_t CDCEM_PayloadLength;
 
 
-/* -- Function declarations ------------------------------------- */
+/* -- Prototypes --------------------------------------------------------------------- */
 CDCEM_Rc CDCEM_clearMessage(CDCEM_Message message);
 CDCEM_Rc CDCEM_createAck(CDCEM_Message message);
 CDCEM_Rc CDCEM_createFrame(CDCEM_Message message, CDCEM_FrameId frameId, CDCEM_PayloadType payloadType, ...);
