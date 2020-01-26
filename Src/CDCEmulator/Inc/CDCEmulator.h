@@ -14,6 +14,7 @@
 #include <stm32f1xx_hal.h>
 
 /* -- Defines ------------------------------------------------------------------------ */
+//Error codes for CDC emulator
 #define CDCE_RC__OK                         0u
 #define CDCE_RC__CONFIGURING_NOT_ALLOWED    1u
 #define CDCE_RC__INVALID_UART_HANDLE        2u
@@ -35,10 +36,24 @@ typedef uint8_t CDCE_Rc;
 
 
 /* -- Prototypes --------------------------------------------------------------------- */
-CDCE_Rc CDCE_configure(CDCE_Config);
+/**
+ * Configures the CDC emulator according to the given configuration.
+ *
+ * @param cfg The configuration descriptor for the CDC emulator
+ */
+CDCE_Rc CDCE_configure(CDCE_Config cfg);
 
+/**
+ * Starts the CDC emulator.
+ */
 CDCE_Rc CDCE_start(void);
 
+/**
+ * Should be called periodically; ensures the sending of periodic
+ *  messages from CDC emulator to the HU.
+ *
+ *  !Currently not used!
+ */
 CDCE_Rc CDCE_periodic(void);
 
 

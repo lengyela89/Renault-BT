@@ -21,7 +21,6 @@
 /* -- Prototypes --------------------------------------------------------------------- */
 
 /* -- Functions ---------------------------------------------------------------------- */
-//TODO: doc
 CDCEM_Rc CDCEM_clearMessage(CDCEM_Message message)
 {
     if (NULL == message)
@@ -38,7 +37,6 @@ CDCEM_Rc CDCEM_clearMessage(CDCEM_Message message)
     return CDCEM_RC__OK;
 }
 
-//TODO: doc
 CDCEM_Rc CDCEM_createAck(CDCEM_Message message)
 {
     if (NULL == message)
@@ -52,7 +50,6 @@ CDCEM_Rc CDCEM_createAck(CDCEM_Message message)
     return CDCEM_RC__OK;
 }
 
-//TODO: macro; datalength calc;
 CDCEM_Rc CDCEM_createFrame(CDCEM_Message message, CDCEM_FrameId frameId,
         CDCEM_PayloadType payloadType, ...)
 {
@@ -94,7 +91,6 @@ CDCEM_Rc CDCEM_createFrame(CDCEM_Message message, CDCEM_FrameId frameId,
     return CDCEM_RC__OK;
 }
 
-//TODO: doc
 bool CDCEM_isACK(CDCEM_Message message)
 {
     if ((NULL != message) && (CDCEM_HEADER__ACK == message[CDCEM_IDX__HEADER]))
@@ -105,7 +101,6 @@ bool CDCEM_isACK(CDCEM_Message message)
     return false;
 }
 
-//TODO: doc
 bool CDCEM_isFrame(CDCEM_Message message)
 {
     if ((NULL != message)
@@ -117,7 +112,6 @@ bool CDCEM_isFrame(CDCEM_Message message)
     return false;
 }
 
-//TODO: datalength calc; doc
 bool CDCEM_isValidHUMessage(CDCEM_Message message)
 {
     if (CDCEM_isACK(message))
@@ -130,6 +124,10 @@ bool CDCEM_isValidHUMessage(CDCEM_Message message)
         bool     result         = true;
         uint8_t  payloadLength  = 0u;
 
+        /*
+         * Checks the payload-type and if it's valid it returns with the length of the payload;
+         *  otherwise an error code is returned (and 0 for payload length).
+         */
         cdcemRc = CDCEM_getHUPayloadLength(message[CDCEM_IDX__PAYLOAD_TYPE],
                 &payloadLength);
         result &= (CDCEM_RC__OK == cdcemRc);
@@ -145,7 +143,6 @@ bool CDCEM_isValidHUMessage(CDCEM_Message message)
     return false;
 }
 
-//TODO: doc
 CDCEM_Rc CDCEM_getMessageLength(CDCEM_Message message,
         CDCEM_MessageLength *length)
 {
@@ -165,7 +162,6 @@ CDCEM_Rc CDCEM_getMessageLength(CDCEM_Message message,
     return CDCEM_RC__OK;
 }
 
-//TODO: doc
 CDCEM_Rc CDCEM_getCDCPayloadLength(CDCEM_PayloadType payloadType,
         CDCEM_PayloadLength *length)
 {
@@ -305,7 +301,7 @@ CDCEM_Rc CDCEM_getHUPayloadLength(CDCEM_PayloadType payloadType,
 }
 
 
-//TODO dataLength type; doc
+//TODO dataLength type;
 CDCEM_Rc CDCEM_dataLengthRangeCheck(CDCEM_Message message)
 {
     if (NULL == message)
@@ -323,7 +319,6 @@ CDCEM_Rc CDCEM_dataLengthRangeCheck(CDCEM_Message message)
     return CDCEM_RC__E_DATA_LEN_RANGE_CHECK;
 }
 
-// TODO doc
 CDCEM_Rc CDCEM_calculateCRC(CDCEM_Message message, CDCEM_Crc *crc,
         CDCEM_Idx *idx)
 {
@@ -370,7 +365,6 @@ CDCEM_Rc CDCEM_refreshCRC(CDCEM_Message message)
     return CDCEM_RC__OK;
 }
 
-// TODO doc
 CDCEM_Rc CDCEM_checkCRC(CDCEM_Message message)
 {
     CDCE_Rc cdcemRc;
@@ -386,7 +380,6 @@ CDCEM_Rc CDCEM_checkCRC(CDCEM_Message message)
     return (message[idx] == crc ? CDCEM_RC__OK : CDCEM_RC__E_CRC);
 }
 
-// TODO doc
 CDCEM_Rc CDCEM_getCRCIndex(CDCEM_Message message, CDCEM_Idx *crcIndex)
 {
     CDCEM_Rc cdcemRc;
@@ -409,7 +402,6 @@ CDCEM_Rc CDCEM_getCRCIndex(CDCEM_Message message, CDCEM_Idx *crcIndex)
     return CDCEM_RC__OK;
 }
 
-//TODO: doc
 CDCEM_Rc CDCEM_setFrameId(CDCEM_Message message, CDCEM_FrameId frameId)
 {
     if (NULL == message)
