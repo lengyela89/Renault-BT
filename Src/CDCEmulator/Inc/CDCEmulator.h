@@ -16,12 +16,13 @@
 /* -- Defines ------------------------------------------------------------------------ */
 //Error codes for CDC emulator
 #define CDCE_RC__OK                         0u
-#define CDCE_RC__CONFIGURING_NOT_ALLOWED    1u
-#define CDCE_RC__INVALID_UART_HANDLE        2u
-#define CDCE_RC__INVALID_EVENT_HANDLER      3u
+#define CDCE_RC__E_CONFIGURING_NOT_ALLOWED  1u
+#define CDCE_RC__E_INVALID_UART_HANDLE      2u
+#define CDCE_RC__E_INVALID_EVENT_HANDLER    3u
 #define CDCE_RC__E_NOT_INITED               4u
 #define CDCE_RC__E_NOT_PLAYING              5u
-#define CDCE_RC__INVALID_MESSAGE_TYPE       6u
+#define CDCE_RC__E_INVALID_MESSAGE_TYPE     6u
+#define CDCE_RC__E_UNKNOWN                  7u              //TODO remove as soon as possible
 
 
 /* -- Typedefs ----------------------------------------------------------------------- */

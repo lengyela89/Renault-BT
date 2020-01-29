@@ -109,32 +109,38 @@ int main(void)
     MX_USART1_UART_Init();
 
     /* USER CODE BEGIN 2 */
-    WM8804_Rc wmRc = WM8804_RC__OK;
+    uint32_t result = WM8804_RC__OK;
 
-    wmRc = WM8804_initialize(&hi2c1, 0x76u,
-            (WM8804_ResetPinConfig)
-            { .GPIOPeripheral = WM8804_RESET_GPIO_Port, .GPIOPin =
-                    WM8804_RESET_Pin, .activeLow = false });
-    if (WM8804_RC__OK != wmRc)
+    WM8804_ResetPinConfig resetPinConfig = {
+        .GPIOPeripheral = WM8804_RESET_GPIO_Port,
+        .GPIOPin = WM8804_RESET_Pin,
+        .activeLow = false
+    };
+
+    result |= WM8804_initialize(&hi2c1, 0x76u, resetPinConfig);
+
+    if (!result)
     {
-        errorHandling();
+        result |= WM8804_configureModule();
     }
 
-    wmRc = WM8804_configureModule();
-    if (WM8804_RC__OK != wmRc)
+    if (!result)
     {
-        errorHandling();
+        CDCE_Config cdceConfig = { .huart = &huart1 };
+
+        result |= CDCE_configure(cdceConfig);
     }
 
-    CDCE_Config cdceConfig =
-    { .huart = &huart1 };
-
-    CDCE_Rc rc = CDCE_configure(cdceConfig);
-    if (CDCE_RC__OK == rc)
+    if (!result)
     {
-        CDCE_start();
+        result |= CDCE_start();
+    }
 
-        //CDCE_start only returns, if an error occurred
+    if (result)
+    {
+        /*
+         * If an error occurred, error handler is called!
+         */
         errorHandling();
     }
 
