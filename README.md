@@ -1,8 +1,7 @@
 # Renault-BT
 Version 1.0.0
 
-The goal of this project is to extend the features of the built-in head units of Renault cars (see Supported devices) with the ability to play music from devices via Bluetooth using the A2DP profile.
-
+The goal of this project is to extend the features of the built-in head units of Renault and Dachia cars (see Supported devices) with the ability to play music from devices via Bluetooth using the A2DP profile.
 
 ## Features
 - Playing music via bluetooth using the A2DP profile
@@ -10,12 +9,22 @@ The goal of this project is to extend the features of the built-in head units of
   - Audio settings (48kHz, 20bits)
   
 ## Possible improvements
+- Supporting basic commands
+  - Volume control (+/-)
+  - Play / Pause
+  - Next / Previous song
+  - Answer / Reject call
 - Supporting built-in dashboard display
   - Show "Bluetooth" text, when HU plays music via bluetooth
+- Supporting steering wheel buttons
+  - Volume control (+/-)
+  - Play / Pause
+  - Next / Previous song
+  - Answer / Reject call
 - Supporting HSP
 
 ## Supported devices
-Built-in head units with "TunerList" label
+Built-in head units with "Tuner List" label
 
 ## Links
 Similar project - https://github.com/Tomasz-Mankowski/MeganeBT <br/>
