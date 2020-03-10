@@ -1,7 +1,7 @@
 # Renault-BT
-Version 1.0.0
+_Version 1.0.0_
 
-The goal of this project is to extend the features of the built-in head units of Renault and Dachia cars (see Supported devices) with the ability to play music from devices via Bluetooth using the A2DP profile.
+The goal of this project is to extend the features of the built-in head units of Renault and Dacia cars (see Supported devices) with the ability to play music from devices via Bluetooth using the A2DP profile.
 
 ## Features
 - Playing music via bluetooth using the A2DP profile
