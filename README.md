@@ -9,22 +9,21 @@ The goal of this project is to extend the features of the built-in head units of
   - Audio settings (48kHz, 20bits)
   
 ## Possible improvements
-- Supporting basic commands
+- Supporting basic commands via AVRCP
   - Volume control (+/-)
   - Play / Pause
   - Next / Previous song
-  - Answer / Reject call
 - Supporting built-in dashboard display
   - Show "Bluetooth" text, when HU plays music via bluetooth
 - Supporting steering wheel buttons
-  - Volume control (+/-)
-  - Play / Pause
-  - Next / Previous song
-  - Answer / Reject call
-- Supporting HSP
+- Supporting HFP/HSP
+  - Answer / Reject call (using HU or steering wheel buttons)
 
 ## Supported devices
 Built-in head units with "Tuner List" label
+
+## Notes
+- The PCB layout is only created to document how the prototype was built.
 
 ## Links
 Similar project - https://github.com/Tomasz-Mankowski/MeganeBT <br/>
